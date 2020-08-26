@@ -15,8 +15,9 @@ driver.get("https://google.com/recaptcha/api2/demo")
 frame = driver.find_element_by_xpath('//iframe[contains(@src, "recaptcha")]')
 driver.switch_to.frame(frame)
 driver.find_element_by_xpath("//*[@id='recaptcha-anchor']").click()
-time.sleep(3)
-driver.find_element_by_title("Solve the challenge").click()
+time.sleep(30)
+
+driver.find_element_by_xpath('//button[@id="recaptcha-audio-button"]').click()
 
 time.sleep(100)
 
